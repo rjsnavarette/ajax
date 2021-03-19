@@ -2,28 +2,21 @@
 
 <h1>Posts</h1>
 
-<table>
-  <thead>
+<table id="posts" class="table table-hover table-bordered">
+  <thead class="table-info text-center">
     <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
+      <th style="width: 40%">Title</th>
+      <th style="width: 40%">Content</th>
+      <th style="width: 20%" colspan="3">Actions</th>
     </tr>
   </thead>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: "delete" %></td>
-      </tr>
-    <% end %>
+  <tbody class="align-middle text-center">
+    <%= render @posts %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Post', new_post_path %>
+<div id="new-post">
+  <%= link_to 'New Post', new_post_path, remote: true %>
+</div>
