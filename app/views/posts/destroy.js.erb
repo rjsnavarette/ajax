@@ -1,0 +1,6 @@
+console.log("Destroy button working");
+// var element = document.getElementById('post<%= @post.id %>');
+// element.remove();
+$('.delete').bind('ajax:success', function() {
+   $(this).closest('tr').fadeOut();
+});
