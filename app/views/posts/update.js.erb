@@ -1,0 +1,4 @@
+$('#post-form').remove();
+$('#new-post a').show();
+$('table#posts tr:last').remove();
+$('table#posts tbody').append("<%= j render @post %>");

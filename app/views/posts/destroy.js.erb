@@ -1,6 +1,13 @@
 console.log("Destroy button working");
 // var element = document.getElementById('post<%= @post.id %>');
 // element.remove();
+
+
 $('.delete').bind('ajax:success', function() {
    $(this).closest('tr').fadeOut();
+});
+
+$(document).ready(function() {
+  setTimeout( "$('#post-form').remove().fadeOut();", 400 );
+  setTimeout( "$('#new-post a').fadeIn(2000).show();", 400 );
 });

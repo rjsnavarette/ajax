@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<div id="show-post">
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <strong>Title:</strong>
+        <%= @post.title %>
+      </p>
+
+      <p>
+        <strong>Content:</strong>
+        <%= @post.content %>
+      </p>
+    </div>
+  </div>
+  <br>
+  <%= link_to 'Hide', root_path, class:"btn btn-secondary" %>
+</div>
